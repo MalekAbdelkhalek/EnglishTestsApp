@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Contact"
+    android:id="@+id/contact"
+    android:background="@drawable/contact_bg">
+    <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/tffn"
+    android:layout_width="250dp"
+    android:layout_centerHorizontal="true"
+    android:layout_height="60dp"
+    android:hint="First name"
+    app:boxBackgroundMode="filled"
+    app:boxStrokeColor="#6A1B9A"
+    app:boxStrokeWidth="0dp"
+    android:layout_marginTop="200dp"
+    android:textColorHint="@color/level2"
+    >
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/efn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:inputType="textNoSuggestions"
+        android:background="@drawable/custom_border"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tfln"
+        android:layout_width="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="60dp"
+        android:hint="Last name"
+        app:boxBackgroundMode="filled"
+        app:boxStrokeColor="#6A1B9A"
+        app:boxStrokeWidth="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/tffn"
+        android:textColorHint="@color/level2"
+        >
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/eln"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:inputType="textNoSuggestions"
+        android:background="@drawable/custom_border"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tfe"
+        android:layout_width="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="60dp"
+        android:hint="Email"
+        android:layout_below="@+id/tfln"
+        android:layout_marginTop="10dp"
+        app:boxStrokeColor="#6A1B9A"
+        app:boxStrokeWidth="0dp"
+        android:textColorHint="@color/level2"
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ee"
+            android:inputType="textEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:background="@drawable/custom_border"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tfm"
+        android:layout_below="@+id/tfe"
+        android:layout_width="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="10dp"
+        android:hint="Enter your message here"
+        android:textColorHint="@color/level2"
+        app:boxStrokeColor="#6A1B9A"
+        app:boxStrokeWidth="0dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/em"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:textSize="18dp"
+            android:lines="4"
+            android:background="@drawable/custom_border"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tfm"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="SEND"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:id="@+id/bs"
+        android:backgroundTint="@color/level1"/>
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/pic"
+        android:layout_below="@+id/bs"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        />
+
+
+</RelativeLayout>

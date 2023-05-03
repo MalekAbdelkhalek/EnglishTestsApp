@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".levels"
+    android:id="@+id/levels"
+    android:background="@drawable/levels">
+
+
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="360dp"
+        android:text="Level 1"
+        android:backgroundTint="@color/level1"
+        android:id="@+id/l1"/>
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/l1"
+        android:layout_marginTop="10dp"
+        android:text="Level 2"
+        android:backgroundTint="@color/level2"
+        android:id="@+id/l2"
+        android:enabled="false"/>
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/l2"
+        android:layout_marginTop="10dp"
+        android:text="Level 3"
+        android:backgroundTint="@color/level3"
+        android:id="@+id/l3"
+        android:enabled="false"/>
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/l3"
+        android:layout_marginTop="10dp"
+        android:text="Level 4"
+        android:backgroundTint="@color/level4"
+        android:id="@+id/l4"
+        android:enabled="false"/>
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/l4"
+        android:layout_marginTop="10dp"
+        android:text="Level 5"
+        android:backgroundTint="@color/level5"
+        android:id="@+id/l5"
+        android:enabled="false"/>
+
+
+</RelativeLayout>

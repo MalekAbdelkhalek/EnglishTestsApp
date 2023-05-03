@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/home"
+            android:title="Home"
+            android:icon="@drawable/icon_home"/>
+        <item android:id="@+id/guide"
+            android:title="Guide"
+            android:icon="@drawable/icon_guide"/>
+    </group>
+    <item android:title="registration" >
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/login"
+                    android:title="Log in"
+                    android:icon="@drawable/icon_login"/>
+                <item android:id="@+id/logout"
+                    android:title="Log out"
+                    android:icon="@drawable/icon_logout"/>
+            </group>
+        </menu>
+    </item>
+        <item android:title="communcation">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item android:id="@+id/contact"
+                        android:title="Contact"
+                        android:icon="@drawable/icon_contact"/>
+                    <item android:id="@+id/rateus"
+                        android:title="Rate us"
+                        android:icon="@drawable/icon_rate_us"/>
+                </group>
+            </menu>
+        </item>
+    <item android:title="Scores">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/leaderboard"
+                    android:title="Leaderboard"
+                    android:icon="@drawable/icon_leaderboard"/>
+                <item android:id="@+id/ownScore"
+                    android:title="Own score"
+                    android:icon="@drawable/icon_score"/>
+            </group>
+        </menu>
+    </item>
+
+
+</menu>
