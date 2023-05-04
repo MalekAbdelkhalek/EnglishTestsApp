@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 public class levels extends AppCompatActivity {
     public static Button l1,l2,l3,l4,l5;
@@ -91,13 +92,14 @@ public class levels extends AppCompatActivity {
         }else{
             user = login.eun.getText().toString();
         }*/
-         if (login.come_from_Login==false && MainActivity.come_from_Main==false) {
-            user = signUp.eun.getText().toString();
-        } else if (login.come_from_Login==false && signUp.come_from_SignUp==false){
+         if (MainActivity.come_from_Main==true) {
             user = MainActivity.name;
+        } else if (signUp.come_from_SignUp==true ){
+             user = signUp.eun.getText().toString();
         }else{
             user = login.eun.getText().toString();
         }
+        //Toast.makeText(this, user, Toast.LENGTH_SHORT).show();
         l1=findViewById(R.id.l1);
         l2=findViewById(R.id.l2);
         l3=findViewById(R.id.l3);

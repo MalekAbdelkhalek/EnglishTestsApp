@@ -76,13 +76,14 @@ public class rateUsDialog extends Dialog {
 
                 DataBase db=new DataBase(context);
                 String username;
-                if (login.come_from_Login==false && MainActivity.come_from_Main==false) {
+                if (signUp.come_from_SignUp==true) {
                     username = signUp.eun.getText().toString();
-                } else if (login.come_from_Login==false && signUp.come_from_SignUp==false){
+                } else if (MainActivity.come_from_Main==true){
                     username = MainActivity.name;
                 }else{
                     username = login.eun.getText().toString();
                 }
+                //Toast.makeText(context, username, Toast.LENGTH_SHORT).show();
 
                 boolean b=db.updateRealColumn("users",username,"rate",userRate);
                 if(b==true){

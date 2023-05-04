@@ -30,7 +30,6 @@ public class guide extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent=new Intent(guide.this,levels.class);
                 startActivity(intent);
-                signUp.come_from_SignUp=false;
             }
         });
     }

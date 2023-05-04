@@ -39,6 +39,8 @@ public class DrawerUtil {
                         Intent intent= new Intent(activity,MainActivity.class);
                         activity.startActivity(intent);
                         drawerLayout.closeDrawer(GravityCompat.START);
+                        login.come_from_Login=false;
+                        signUp.come_from_SignUp=false;
                         break;
                     }
                     case R.id.login: {
@@ -63,11 +65,18 @@ public class DrawerUtil {
                             DataBase db = new DataBase(activity);
                             String username=db.userLogged();
                             boolean b = db.updateIntColumn("users", username, "state", 0);
-                            Toast.makeText(activity, "Logged out successfully !", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(activity, login.class);
-                            activity.startActivity(intent);
-                            drawerLayout.closeDrawer(GravityCompat.START);
-                            MainActivity.userLoggedExists=false;
+                             if(b==true){
+                                 Toast.makeText(activity, "Logged out successfully !", Toast.LENGTH_SHORT).show();
+                                 Intent intent = new Intent(activity, login.class);
+                                 activity.startActivity(intent);
+                                 drawerLayout.closeDrawer(GravityCompat.START);
+                                 MainActivity.come_from_Main = false;
+                                 MainActivity.userLoggedExists=false;
+                                 MainActivity.ownScoreValidation=false;
+                                 MainActivity.name="";
+                             }else{
+                                 Toast.makeText(activity, "Failed to log out !", Toast.LENGTH_SHORT).show();
+                             }
                             break;
                         }
                     }
@@ -109,7 +118,7 @@ public class DrawerUtil {
                             Toast.makeText(activity, "You need to log in !", Toast.LENGTH_SHORT).show();
 
                         }else {
-                            Toast.makeText(activity, "Rate us !", Toast.LENGTH_SHORT).show();
+                           // Toast.makeText(activity, "Rate us !", Toast.LENGTH_SHORT).show();
                             rateUsDialog rateUs = new rateUsDialog(activity);
                             rateUs.getWindow().setBackgroundDrawable(new ColorDrawable(mContext.getResources().getColor(android.R.color.transparent)));
                             rateUs.setCancelable(false);

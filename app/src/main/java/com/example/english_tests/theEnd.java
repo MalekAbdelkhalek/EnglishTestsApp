@@ -54,13 +54,14 @@ public class theEnd extends AppCompatActivity {
     @SuppressLint("Range")
     public void storeUserScore(){
         String username;
-        if (login.come_from_Login==false && MainActivity.ownScoreValidation==false) {
+        if (signUp.come_from_SignUp==true) {
             username = signUp.eun.getText().toString();
-        } else if (login.come_from_Login==false && signUp.come_from_SignUp==false){
+        } else if (MainActivity.come_from_Main==true){
             username = MainActivity.name;
         }else{
             username = login.eun.getText().toString();
         }
+        //Toast.makeText(context, username, Toast.LENGTH_SHORT).show();
         Cursor cursor = db.readUserdata(username);
         if (cursor.getCount() == 0) {
             Toast.makeText(this, "No Data !", Toast.LENGTH_SHORT).show();

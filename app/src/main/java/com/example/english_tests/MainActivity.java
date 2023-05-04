@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
             come_from_Main = true;
 
         }
-
+        //Toast.makeText(this, name+come_from_Main, Toast.LENGTH_SHORT).show();
        bgs.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-         /*boolean b = db.addColumnToTable("users","rate","REAL");
+       /*  boolean b = db.deleteRow("SS");
                if(b==true){
                   Toast.makeText(MainActivity.this, "added", Toast.LENGTH_SHORT).show();
               }else{
