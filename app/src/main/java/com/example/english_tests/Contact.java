@@ -18,6 +18,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class Contact extends AppCompatActivity {
 
@@ -35,6 +38,14 @@ public class Contact extends AppCompatActivity {
 
         Button bs=findViewById(R.id.bs);
 
+
+        //fire base
+        FirebaseApp.initializeApp(this);
+        DatabaseReference databaseRef = FirebaseDatabase.getInstance().getReference();
+        databaseRef=databaseRef.child("contact").push();
+
+
+
         efn.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
@@ -45,6 +56,7 @@ public class Contact extends AppCompatActivity {
                 return false;
             }
         });
+        DatabaseReference finalDatabaseRef = databaseRef;
         bs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,14 +72,17 @@ public class Contact extends AppCompatActivity {
                     if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
                         Toast.makeText(Contact.this, "Please enter the email correctly !", Toast.LENGTH_SHORT).show();
                     }
+
                     else{
-                        boolean b=db.insertMessage(firstName,lastName,email,message);
-                        if(b){
+                        //boolean b=db.insertMessage(firstName,lastName,email,message);
+                        //fire base insertion
+                        contactMessage newMessage = new contactMessage(firstName,lastName,email,message);
+                        finalDatabaseRef.setValue(newMessage);
+
+
                             Toast.makeText(Contact.this, "Message sent successfully !", Toast.LENGTH_SHORT).show();
-                        }
-                        else{
-                            Toast.makeText(Contact.this, "Failed to send the message !", Toast.LENGTH_SHORT).show();
-                        }
+
+
                     }
 
                 }

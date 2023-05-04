@@ -15,6 +15,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatButton;
 
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class rateUsDialog extends Dialog {
     private Context context;
     private float userRate=0;
@@ -86,6 +90,15 @@ public class rateUsDialog extends Dialog {
                 //Toast.makeText(context, username, Toast.LENGTH_SHORT).show();
 
                 boolean b=db.updateRealColumn("users",username,"rate",userRate);
+
+                //fire base insertion
+                FirebaseApp.initializeApp(context);
+                DatabaseReference databaseRef = FirebaseDatabase.getInstance().getReference();
+                databaseRef=databaseRef.child("rate");
+
+
+
+
                 if(b==true){
                     Toast.makeText(context, "Thank you!", Toast.LENGTH_SHORT).show();
                     dismiss();

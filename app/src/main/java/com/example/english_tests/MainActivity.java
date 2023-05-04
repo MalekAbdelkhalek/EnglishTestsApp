@@ -17,6 +17,12 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
     public static String name;
@@ -37,10 +43,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
        /* RelativeLayout MainActivity=findViewById(R.id.MainActivity);
         MainActivity.setBackgroundResource(R.drawable.acceuil_page);*/
 
         Button bgs= findViewById(R.id.bgs);
+
+
         DataBase db= new DataBase(this);
         //boolean userLogged=db.checkUserLogged();
         name=db.userLogged();
