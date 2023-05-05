@@ -530,68 +530,68 @@ public class level_1 extends AppCompatActivity {
                                       if (dataBase.getIntColumn(table, "count_answers", username) == 10) {
                                           ImageView imgr = findViewById(R.id.imgr);
                                           if(dataBase.getIntColumn(table, "right_answers", username)==10){
-                                              tr.setText("- 10/10 - \n Fantastic " + username + " ! \n" + "Perfect score, you nailed it!");
-                                              tr.setTextColor(getResources().getColor(R.color.ton));
+                                              tr.setText("- 10/10 - \n Fantastic " + username + " ! \n" + "Perfect score,\n you nailed it!");
+                                              tr.setTextColor(getResources().getColor(R.color.borders));
                                               Drawable drawable = getResources().getDrawable(R.drawable.ten);
                                               imgr.setImageDrawable(drawable);
                                               }
                                           else if(dataBase.getIntColumn(table, "right_answers", username)==9){
-                                              tr.setText("- 9/10 - \n Excellent job " + username + " ! \n" + "You're almost a master, keep going!");
-                                              tr.setTextColor(getResources().getColor(R.color.ton));
+                                              tr.setText("- 9/10 - \n Excellent job " + username + " ! \n" + "You're almost a master,\n keep going!");
+                                              tr.setTextColor(getResources().getColor(R.color.borders));
                                               Drawable drawable = getResources().getDrawable(R.drawable.nine);
                                               imgr.setImageDrawable(drawable);
                                               }
                                           else if(dataBase.getIntColumn(table, "right_answers", username)==8){
-                                              tr.setText("- 8/10 - \n Great work " + username + " ! \n" + "You're almost there, keep pushing yourself!");
-                                              tr.setTextColor(getResources().getColor(R.color.eos));
+                                              tr.setText("- 8/10 - \n Great work " + username + " ! \n" + "You're almost there,\n keep pushing yourself!");
+                                              tr.setTextColor(getResources().getColor(R.color.borders));
                                               Drawable drawable = getResources().getDrawable(R.drawable.eight);
                                               imgr.setImageDrawable(drawable);
                                               }
                                           else if(dataBase.getIntColumn(table, "right_answers", username)==7){
-                                              tr.setText("- 7/10 - \n Well done " + username + " ! \n" + "You're making progress, keep studying!");
-                                              tr.setTextColor(getResources().getColor(R.color.eos));
+                                              tr.setText("- 7/10 - \n Well done " + username + " ! \n" + "You're making progress,\n keep studying!");
+                                              tr.setTextColor(getResources().getColor(R.color.borders));
                                               Drawable drawable = getResources().getDrawable(R.drawable.seven);
                                               imgr.setImageDrawable(drawable);
                                               }
                                           else if(dataBase.getIntColumn(table, "right_answers", username)==6){
-                                              tr.setText("- 6/10 - \n Good job " + username + " ! \n" + "You're on the right track, keep it up!");
-                                              tr.setTextColor(getResources().getColor(R.color.sof));
+                                              tr.setText("- 6/10 - \n Good job " + username + " ! \n" + "You're on the right track,\n keep it up!");
+                                              tr.setTextColor(getResources().getColor(R.color.borders));
                                               Drawable drawable = getResources().getDrawable(R.drawable.six);
                                               imgr.setImageDrawable(drawable);
                                               }
                                           else if (dataBase.getIntColumn(table, "right_answers", username) == 5) {
-                                              tr.setText("- 5/10 - \n Halfway there " + username + " ! \n" + "Keep up the good work and aim for higher next time.");
-                                              tr.setTextColor(getResources().getColor(R.color.sof));
+                                              tr.setText("- 5/10 - \n Halfway there " + username + " ! \n" + "Keep up the good work \nand aim for higher next time.");
+                                              tr.setTextColor(getResources().getColor(R.color.borders));
                                               Drawable drawable = getResources().getDrawable(R.drawable.five);
                                               imgr.setImageDrawable(drawable);
                                               ;
                                           } else if (dataBase.getIntColumn(table, "right_answers", username) == 4) {
                                               tr.setText("- 4/10 - \n You're getting there " + username + " ! \n" + "Keep studying and practicing.");
-                                              tr.setTextColor(getResources().getColor(R.color.fot));
+                                              tr.setTextColor(getResources().getColor(R.color.borders));
                                               Drawable drawable = getResources().getDrawable(R.drawable.four);
                                               imgr.setImageDrawable(drawable);
                                               ;
                                           } else if (dataBase.getIntColumn(table, "right_answers", username) == 3) {
-                                              tr.setText("- 3/10 - \n Not bad " + username + " ! \n" + "but there's room for improvement. Keep at it!");
-                                              tr.setTextColor(getResources().getColor(R.color.fot));
+                                              tr.setText("- 3/10 - \n Not bad " + username + " ! \n" + "but there's room for improvement.\n Keep at it!");
+                                              tr.setTextColor(getResources().getColor(R.color.borders));
                                               Drawable drawable = getResources().getDrawable(R.drawable.three);
                                               imgr.setImageDrawable(drawable);
                                               ;
                                           } else if (dataBase.getIntColumn(table, "right_answers", username) == 2) {
                                               tr.setText("- 2/10 - \n Good effort " + username + " ! \n" + "Keep practicing to improve your skills.");
-                                              tr.setTextColor(getResources().getColor(R.color.too));
+                                              tr.setTextColor(getResources().getColor(R.color.borders));
                                               Drawable drawable = getResources().getDrawable(R.drawable.two);
                                               imgr.setImageDrawable(drawable);
                                               ;
                                           } else if (dataBase.getIntColumn(table, "right_answers", username) == 1) {
                                               tr.setText("- 1/10 - \n Keep Trying " + username + " ! \n" + "Everyone starts somewhere.");
-                                              tr.setTextColor(getResources().getColor(R.color.too));
+                                              tr.setTextColor(getResources().getColor(R.color.borders));
                                               Drawable drawable = getResources().getDrawable(R.drawable.one);
                                               imgr.setImageDrawable(drawable);
                                               ;
                                           } else if (dataBase.getIntColumn(table, "right_answers", username) == 0) {
-                                              tr.setText("- 0/10 - \n This is just the beginning " + username + " ! \n" + "Don't give up, keep trying and you will make progress.");
-                                              tr.setTextColor(getResources().getColor(R.color.zero));
+                                              tr.setText("- 0/10 - \n This is just the beginning " + username + " ! \n" + "Don't give up,\n keep trying and you will make progress.");
+                                              tr.setTextColor(getResources().getColor(R.color.borders));
                                               Drawable drawable = getResources().getDrawable(R.drawable.zero);
                                               imgr.setImageDrawable(drawable);
                                               ;
