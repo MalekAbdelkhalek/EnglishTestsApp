@@ -21,6 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class rateUsDialog extends Dialog {
     private Context context;
+
     private float userRate=3;
     /*public rateUsDialog(@NonNull Context context) {
         super(context);
@@ -94,10 +95,13 @@ public class rateUsDialog extends Dialog {
                 //fire base insertion
                 FirebaseApp.initializeApp(context);
                 DatabaseReference databaseRef = FirebaseDatabase.getInstance().getReference();
-                databaseRef=databaseRef.child("rate");
-                databaseRef=databaseRef.child(username);
-                databaseRef=databaseRef.child("rateScore");
-                databaseRef.setValue(userRate);
+                databaseRef=databaseRef.child("rate").push();
+
+
+                rateSaves newRate = new rateSaves(username, userRate);
+                databaseRef.setValue(newRate);
+
+
 
 
 
