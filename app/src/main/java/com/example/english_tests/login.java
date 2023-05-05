@@ -98,11 +98,12 @@ public class login extends AppCompatActivity {
                             db.updateIntColumn("users", user, "state", 1);
                             MainActivity.userLoggedExists = true;
                             come_from_Login = true;
-                            Toast.makeText(login.this, "login successfully", Toast.LENGTH_SHORT).show();
                             if (db.getIntColumn("users", "level_reached", user) > 5) {
+                                Toast.makeText(login.this, "You already finished the game!", Toast.LENGTH_LONG).show();
                                 Intent intent = new Intent(login.this, theEnd.class);
                                 startActivity(intent);
                             } else {
+                                Toast.makeText(login.this, "login successfully !", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(login.this, levels.class);
                                 startActivity(intent);
                             }
